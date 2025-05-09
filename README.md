@@ -60,7 +60,7 @@ A full-stack e-commerce platform enabling customers to browse, purchase, and rev
 
 | Area         | Controllers                                    |
 |--------------|------------------------------------------------|
-| Accounts     | `AccountController`                            |
+| AppUsers     | `AccountController`                            |
 | Products     | `ProductController`, `CategoryController`      |
 | Orders       | `OrderController`, `OrderItemController`       |
 | Cart         | `CartController`                               |
@@ -73,7 +73,7 @@ A full-stack e-commerce platform enabling customers to browse, purchase, and rev
 
 ```mermaid
 classDiagram
-    class Account {
+    class AppUser {
         string Id
         string Email
         string PasswordHash
@@ -94,12 +94,12 @@ classDiagram
 
     class Cart {
         int Id
-        string AccountId
+        string AppUserId
     }
 
     class Order {
         int Id
-        string AccountId
+        string AppUserId
         DateTime OrderDate
         string Status
     }
@@ -113,7 +113,7 @@ classDiagram
 
     class Review {
         int Id
-        string AccountId
+        string AppUserId
         int ProductId
         string Content
         int Rating
@@ -121,15 +121,15 @@ classDiagram
 
     class Wishlist {
         int Id
-        string AccountId
+        string AppUserId
         int ProductId
     }
 
     %% Relationships
-    Account "1" --> "*" Cart
-    Account "1" --> "*" Order
-    Account "1" --> "*" Review
-    Account "1" --> "*" Wishlist
+    AppUser "1" --> "*" Cart
+    AppUser "1" --> "*" Order
+    AppUser "1" --> "*" Review
+    AppUser "1" --> "*" Wishlist
     Product "1" --> "*" Review
     Product "1" --> "*" OrderItem
     Product "1" --> "*" Wishlist
