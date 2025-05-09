@@ -32,7 +32,7 @@ A full-stack e-commerce platform enabling customers to browse, purchase, and rev
   - Profile view and updates  
 
 - **Security**
-  - JWT-based authentication  
+  - Cookies-based authentication  
   - Angular HTTP interceptors for token injection and error handling  
   - Protected admin routes  
 
@@ -49,7 +49,7 @@ A full-stack e-commerce platform enabling customers to browse, purchase, and rev
 ### Backend
 - **ASP.NET Core 8** Web API  
 - **Entity Framework Core** with SQL Server  
-- **JWT Authentication & Role Authorization**  
+- **Cookies Authentication & Role Authorization**  
 - **RESTful APIs** with DTOs and clean separation of concerns  
 
 ---
